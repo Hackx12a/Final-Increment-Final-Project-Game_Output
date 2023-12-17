@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dqwtaa3uyi6pd"
+path="res://.godot/imported/Minecraft Damage - Sound Effect [TubeRipper.com].ogg-440c63a63ca206add4046e5b8a583a64.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound effects/Minecraft Damage - Sound Effect [TubeRipper.com].ogg"
+dest_files=["res://.godot/imported/Minecraft Damage - Sound Effect [TubeRipper.com].ogg-440c63a63ca206add4046e5b8a583a64.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

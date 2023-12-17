@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dpv605084i4hw"
+path="res://.godot/imported/Technology Controller Button Clicking -[BACKGROUND FREE MUSIC] [TubeRipper.com].ogg-ab7514b9a3f72d8588cb61ddfa0f6165.oggvorbisstr"
+
+[deps]
+
+source_file="res://Technology Controller Button Clicking -[BACKGROUND FREE MUSIC] [TubeRipper.com].ogg"
+dest_files=["res://.godot/imported/Technology Controller Button Clicking -[BACKGROUND FREE MUSIC] [TubeRipper.com].ogg-ab7514b9a3f72d8588cb61ddfa0f6165.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

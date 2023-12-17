@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bexftnnwmb87f"]
+
+[ext_resource type="Script" path="res://hadukenplayer1.gd" id="1_4156r"]
+[ext_resource type="Texture2D" uid="uid://vlvbyq2raqap" path="res://1366x768-png-transparent-hadouken-hadoken-pixel-art-ryu-others-blue-rectangle-symmetry-thumbnail.png" id="2_rusdu"]
+[ext_resource type="Texture2D" uid="uid://bta0xu4brm37p" path="res://specialeffects/puncheffect1.png" id="3_3rxp6"]
+[ext_resource type="AudioStream" uid="uid://0jdcteworn61" path="res://sound effects/Kick sound effect [TubeRipper.com].ogg" id="4_r0b8q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vesx0"]
+radius = 20.1851
+
+[node name="hadukenplayer1" type="Area2D"]
+script = ExtResource("1_4156r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(249, 358)
+scale = Vector2(1, 1.1)
+shape = SubResource("CircleShape2D_vesx0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(245.687, 359.375)
+scale = Vector2(0.0493787, 0.0778618)
+texture = ExtResource("2_rusdu")
+
+[node name="haduken2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(288, 355)
+scale = Vector2(1.18212, 1.05208)
+texture = ExtResource("3_3rxp6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="kick2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_r0b8q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bnl8yyh2v1mvr"
+path="res://.godot/imported/Minecraft Villager Hurt Sound Effect [TubeRipper.com].ogg-75c33b54d5433c20ec642173847a0a6d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound effects/Minecraft Villager Hurt Sound Effect [TubeRipper.com].ogg"
+dest_files=["res://.godot/imported/Minecraft Villager Hurt Sound Effect [TubeRipper.com].ogg-75c33b54d5433c20ec642173847a0a6d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

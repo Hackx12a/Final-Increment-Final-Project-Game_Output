@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cey7ts6rjd3yj"
+path="res://.godot/imported/Male Hurt - Sound Effect [TubeRipper.com].ogg-964cf9c63eb97371fcf6a6b7aa0a3300.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound effects/Male Hurt - Sound Effect [TubeRipper.com].ogg"
+dest_files=["res://.godot/imported/Male Hurt - Sound Effect [TubeRipper.com].ogg-964cf9c63eb97371fcf6a6b7aa0a3300.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

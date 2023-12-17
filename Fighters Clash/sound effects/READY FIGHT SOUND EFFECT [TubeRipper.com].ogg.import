@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://5qcaktubj8yd"
+path="res://.godot/imported/READY FIGHT SOUND EFFECT [TubeRipper.com].ogg-b62cb6c2d8461fa7497e2c9ff7bc9c6f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound effects/READY FIGHT SOUND EFFECT [TubeRipper.com].ogg"
+dest_files=["res://.godot/imported/READY FIGHT SOUND EFFECT [TubeRipper.com].ogg-b62cb6c2d8461fa7497e2c9ff7bc9c6f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

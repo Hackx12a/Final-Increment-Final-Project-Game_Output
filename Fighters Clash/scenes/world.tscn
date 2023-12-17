@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmqs44bcnihrb"]
+
+[ext_resource type="PackedScene" uid="uid://5aulmmph07da" path="res://players.tscn" id="1_13edj"]
+[ext_resource type="PackedScene" uid="uid://b2otow6wea1tv" path="res://pick_player.tscn" id="3_bm3xa"]
+[ext_resource type="PackedScene" uid="uid://tlqjrn3w51i7" path="res://haduken.tscn" id="4_eh5te"]
+[ext_resource type="PackedScene" uid="uid://rqdlfnvo87a1" path="res://parallax_background.tscn" id="5_xy1p3"]
+[ext_resource type="PackedScene" uid="uid://bexftnnwmb87f" path="res://hadukenplayer_1.tscn" id="6_s7auu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gq56j"]
+size = Vector2(1163, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ig5f"]
+size = Vector2(37, 648)
+
+[node name="world" type="Node2D"]
+
+[node name="hadukenplayer1" parent="." instance=ExtResource("6_s7auu")]
+position = Vector2(-3, 367)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(588, 632.5)
+shape = SubResource("RectangleShape2D_gq56j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8.5, 314)
+shape = SubResource("RectangleShape2D_8ig5f")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1173, 327)
+shape = SubResource("RectangleShape2D_8ig5f")
+
+[node name="Area2D" parent="." instance=ExtResource("4_eh5te")]
+position = Vector2(1110, 645)
+
+[node name="player1" parent="." instance=ExtResource("3_bm3xa")]
+visible = false
+position = Vector2(137, 250)
+
+[node name="players" parent="." instance=ExtResource("1_13edj")]
+position = Vector2(122, 297)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("5_xy1p3")]

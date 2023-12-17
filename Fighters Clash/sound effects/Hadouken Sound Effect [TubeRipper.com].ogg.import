@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b2buo6ijjeloi"
+path="res://.godot/imported/Hadouken Sound Effect [TubeRipper.com].ogg-97a4d70ba265317fa4a847082839eaf6.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound effects/Hadouken Sound Effect [TubeRipper.com].ogg"
+dest_files=["res://.godot/imported/Hadouken Sound Effect [TubeRipper.com].ogg-97a4d70ba265317fa4a847082839eaf6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

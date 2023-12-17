@@ -1,0 +1,127 @@
+[gd_scene load_steps=14 format=3 uid="uid://cy2m56g2f27yd"]
+
+[ext_resource type="Script" path="res://scenes/player1.gd" id="1_qiade"]
+[ext_resource type="Texture2D" uid="uid://cutdrpnlo6lls" path="res://selection screen/BlankaPortrait.png" id="2_xlony"]
+[ext_resource type="Texture2D" uid="uid://cxogojknvsyvt" path="res://selection screen/RyuPortrait.png" id="3_ylqcy"]
+[ext_resource type="Texture2D" uid="uid://cym7y3n2u0pqw" path="res://selection screen/EHondaPortrait.png" id="4_jw6vd"]
+[ext_resource type="Texture2D" uid="uid://c1gqb8dd6720t" path="res://selection screen/SelectionCursorPlayer1.png" id="5_jqnqq"]
+[ext_resource type="FontFile" uid="uid://c2w4a4jn3r7by" path="res://ModernWarfare-OV7KP.ttf" id="6_vbiy2"]
+[ext_resource type="FontFile" uid="uid://yuqrbo81o8g0" path="res://Robus-BWqOd.otf" id="7_1fmrq"]
+[ext_resource type="AudioStream" uid="uid://c2vc733cm2brv" path="res://Street Fighter II 2 Complete Soundtrack OST [TubeRipper.com].ogg" id="8_v8kil"]
+[ext_resource type="Script" path="res://checkerifbothplayerareready.gd" id="9_j0hxp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_671wj"]
+size = Vector2(25.5073, 29.1765)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_is4lj"]
+size = Vector2(68, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aps43"]
+size = Vector2(63, 63)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dbuc3"]
+load_path = "res://.godot/imported/E Honda - Idle.png-6124248d1eb4df02af17414be4e761df.ctex"
+
+[node name="player1" type="Node2D"]
+script = ExtResource("1_qiade")
+
+[node name="BlankaPortrait" type="Sprite2D" parent="."]
+position = Vector2(493, 357)
+scale = Vector2(2.1875, 2.0625)
+texture = ExtResource("2_xlony")
+
+[node name="RyuPortrait" type="Sprite2D" parent="."]
+position = Vector2(422, 357)
+scale = Vector2(2.25, 2.0625)
+texture = ExtResource("3_ylqcy")
+
+[node name="EHondaPortrait" type="Sprite2D" parent="."]
+position = Vector2(354, 357)
+scale = Vector2(2.125, 2.0625)
+texture = ExtResource("4_jw6vd")
+
+[node name="SelectionCursorPlayer1" type="Sprite2D" parent="."]
+position = Vector2(353.5, 356)
+scale = Vector2(2.15625, 2.125)
+texture = ExtResource("5_jqnqq")
+
+[node name="Player 1" type="Label" parent="."]
+offset_left = 322.0
+offset_top = 256.0
+offset_right = 598.0
+offset_bottom = 328.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vbiy2")
+theme_override_font_sizes/font_size = 35
+text = "Player 1
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="selectionbox4" type="Area2D" parent="."]
+
+[node name="selectionbox" type="CollisionShape2D" parent="selectionbox4"]
+position = Vector2(348.5, 356)
+scale = Vector2(2.15625, 2.125)
+shape = SubResource("RectangleShape2D_671wj")
+
+[node name="blanka" type="StaticBody2D" parent="."]
+position = Vector2(494, 357)
+
+[node name="blanka" type="CollisionShape2D" parent="blanka"]
+shape = SubResource("RectangleShape2D_is4lj")
+
+[node name="ehonda" type="StaticBody2D" parent="."]
+
+[node name="ehonda" type="CollisionShape2D" parent="ehonda"]
+position = Vector2(352.5, 356.5)
+shape = SubResource("RectangleShape2D_aps43")
+
+[node name="ryu" type="StaticBody2D" parent="."]
+
+[node name="ryu" type="CollisionShape2D" parent="ryu"]
+position = Vector2(422, 357)
+shape = SubResource("RectangleShape2D_aps43")
+
+[node name="ready" type="Label" parent="."]
+visible = false
+offset_left = 143.0
+offset_top = 260.0
+offset_right = 191.0
+offset_bottom = 286.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("6_vbiy2")
+theme_override_font_sizes/font_size = 20
+text = "Ready"
+
+[node name="name" type="Label" parent="."]
+offset_left = 65.0
+offset_top = 262.0
+offset_right = 262.0
+offset_bottom = 346.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_1fmrq")
+theme_override_font_sizes/font_size = 80
+text = " Ehonda"
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_v8kil")
+
+[node name="checkerifbothplayerareready" type="Node2D" parent="."]
+script = ExtResource("9_j0hxp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 201.0
+offset_top = 11.0
+offset_right = 938.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("6_vbiy2")
+text = "Click Enter to Start the Battle both player must choose a fighter"
+
+[node name="hero" type="Sprite2D" parent="."]
+position = Vector2(141, 467)
+scale = Vector2(1.9375, 1.85937)
+texture = SubResource("CompressedTexture2D_dbuc3")
+
+[connection signal="p1ready" from="." to="checkerifbothplayerareready" method="_on_player_1_p_1_ready"]
+[connection signal="body_entered" from="selectionbox4" to="." method="_on_selectionbox_4_body_entered" flags=18]
